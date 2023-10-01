@@ -1,5 +1,6 @@
 declare module 'react-native-ico-sensa-emoji-vectors' {
     import { ReactNode } from 'react';
+    import { SvgProps, AdditionalProps } from 'react-native-svg';
 
     type iconNames = 'airplane' |
       'angry-face' |
@@ -381,7 +382,7 @@ declare module 'react-native-ico-sensa-emoji-vectors' {
       badge?: number | string | badgeTypeObj;
     }
 
-    const Icon: (props: IconProps) => ReactNode;
+    const Icon: (props: IconProps & SvgProps & AdditionalProps) => ReactNode;
 
     export { iconNames };
     export default Icon;
